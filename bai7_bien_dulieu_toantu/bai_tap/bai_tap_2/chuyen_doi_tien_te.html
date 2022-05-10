@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyendoitiente</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <th>
+            <input id="amount" type = "number"/>
+        </th>
+        <th>
+            <select id="from">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </th>
+        <th>
+            <select id="toC">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </th>
+        <th>
+            <button onclick="convert()">Convert</button>
+        </th>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function convert() {
+     let Amount = document.getElementById("amount").value;
+     let FromC = document.getElementById("from").value;
+     let ToC = document.getElementById("toC").value;
+     let result;
+
+     if (FromC == "VND" && ToC == "USD"){
+         Result = "Result after convert: " + (Amount/23000) + "$"
+     }
+     else if (FromC == "USD" && ToC == "VND"){
+         Result = "Result after convert: " + (Amount*23000) + "VND"
+     }
+     else if (FromC == "VND" && ToC == "VND"){
+         Result = "Result after convert: " + Amount + " VND";
+     }
+     else {
+         Result = "Result after convert: " + Amount + "$";
+     }
+        document.getElementById("result").innerHTML = Result;
+    }
+</script>
+</body>
+</html>
