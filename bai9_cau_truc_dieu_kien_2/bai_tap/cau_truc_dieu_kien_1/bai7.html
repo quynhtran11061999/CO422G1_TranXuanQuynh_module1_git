@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<!-- // Phí thuê bao bắt buộc là 25 nghìn.
+// 600 đồng cho mỗi gọi của 50 phút đầu tiên.
+// 400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+// 200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+-->
+<script>
+    let pbb = 25000
+    let minute = parseInt(prompt('Nhap so phut goi:'));
+    let tiencuoc
+    if (minute <= 50){
+        tiencuoc = (minute * 600) + pbb
+    } else if (minute <= 150){
+        tiencuoc = ((minute - 50) * 400) + pbb
+    } else if (minute <= 200){
+        tiencuoc = ((minute - 200) * 200) + pbb
+    }
+    alert(tiencuoc)
+</script>
+</body>
+</html>

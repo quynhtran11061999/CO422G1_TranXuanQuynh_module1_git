@@ -6,24 +6,35 @@
 </head>
 <body>
 <h1>Tính chỉ số cân nặng</h1>
-<form action="">
     <lable>Nhập cân nặng:(kg)</lable>
-    <input type="number" name id="can_nang">
+    <input type="number"  id="cannang">
     <br/>
     <br/>
     <label>Nhập chiều cao:(m)</label>
-    <input type="number" name id="chieu_cao">
+    <input type="number"  id="chieucao">
     <br/>
     <br/>
-    <button onclick="Kiem_tra()">Kiểm tra</button>
-</form>
-<p id="result"></p>
+    <button onclick="kiem_tra()">Kiểm tra</button>
+<p id="ketqua"> </p>
 <script>
     function kiem_tra() {
-    let cannang = document.getElementById("can_nang").value;
-    let chieucao = document.getElementById("chieu_cao").value;
+    let weight = parseFloat(document.getElementById("cannang").value);
+    let height = parseFloat(document.getElementById("chieucao").value);
+
+    let bmi = weight / (height*height);
+
     let result;
-    
+    if (bmi < 18.5){
+        result = "Underweight"
+    } else if (bmi < 25){
+        result = "Normal"
+    } else if (bmi < 30.0){
+        result = "Overweight"
+    } else {
+        result = "Obese"
+    }
+    document.getElementById("ketqua").innerHTML = "Your BIM is:" + result
+    //     document.write(result);
     }
 </script>
 </body>

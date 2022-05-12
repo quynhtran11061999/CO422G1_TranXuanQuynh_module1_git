@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<!--Tính số tiền hoa hồng nhận được
+Doanh thu <= 10tr => Hoa hồng 3%
+    Doanh thu > 10 tr => Hoa hồng 5%
+    doanh thu  > 20 tr => Hoa hồng 10%
+    Doanh thu  > 50tr => 20%
+    -->
+<script>
+ let a = prompt("Doanh thu thu được:")
+ let hh3 = (parseInt(a*3))/100
+ let hh5 = (parseInt(a*5))/100
+ let hh10 = (parseInt(a*10))/100
+ let hh20 = (parseInt(a*20))/100
+    if ( a > 50000){
+        alert(hh20)
+    } else if (a>20000){
+        alert(hh10)
+    } else if (a>10000){
+        alert(hh5)
+    } else {
+        alert(hh3)
+    }
+
+</script>
+</body>
+</html>
