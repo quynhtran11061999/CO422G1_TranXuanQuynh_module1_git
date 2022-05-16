@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let i = parseInt(prompt("Nhập nhiệt độ cơ thể:"))
+    while (i < 20 || i >100){
+        if (i<20){
+            alert("Tăng nhiệt độ")
+            i = parseInt(prompt("Nhập nhiệt độ cơ thể:"))
+            if (i>100){
+                alert("Giảm nhiệt độ")
+                i = parseInt(prompt("Nhập nhiệt độ cơ thể:"))
+            }
+        }
+        alert("Nhiệt độ bình thường")
+    }
+</script>
+</body>
+</html>
