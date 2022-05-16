@@ -2,37 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>maytinhdongian</title>
+    <title>maytinh</title>
 </head>
 <body>
-<input type="text">
-<br>
-<br>
-<table BORDER="1">
-    <tr>
-        <td><button type="button" value="1" onclick=""> 1 </button></td>
-        <td><button type="button" value="2" onclick=""> 2 </button></td>
-        <td><button type="button" value="3" onclick=""> 3 </button></td>
-        <td><button type="button" value="+" onclick=""> + </button></td>
-    </tr>
-    <tr>
-        <td><button type="button" value="4" onclick=""> 4 </button></td>
-        <td><button type="button" value="5" onclick=""> 5 </button></td>
-        <td><button type="button" value="6" onclick=""> 6 </button></td>
-        <td><button type="button" value="-" onclick=""> - </button></td>
-    </tr>
-    <tr>
-        <td><button type="button" value="7" onclick=""> 7 </button></td>
-        <td><button type="button" value="8" onclick=""> 8 </button></td>
-        <td><button type="button" value="9" onclick=""> 9 </button></td>
-        <td><button type="button" value="*" onclick=""> * </button></td>
-    </tr>
-    <tr>
-        <td><button type="button" value="AC" onclick=""> AC </button></td>
-        <td><button type="button" value="0" onclick=""> 0 </button></td>
-        <td><button type="button" value="=" onclick=""> = </button></td>
-        <td><button type="button" value="/" onclick=""> / </button></td>
-    </tr>
-</table>
+<form name="calu">
+    <table border="2" align="center"  style="width: 200px" cellpadding="2">
+        <tr>
+            <td colspan="4"><input type="text" value="" name="screen" style="width: 220px" id="src"></td>
+        </tr>
+        <tr>
+            <td><input type="button" style="width: 50px" onclick="( calu.screen.value += '1')" value="1"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '2')" value="2"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '3')" value="3"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '+')" value="+"></td>
+        </tr>
+        <tr>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '4')" value="4"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '5')" value="5"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '6')" value="6"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '-')" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '7')" value="7"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '8')" value="8"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '9')" value="9"></td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '*')" value="*"></td>
+        </tr>
+        <tr>
+            <td><input type="reset" style="width: 50px"   value="C"  id="reset">  </td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '0')" value="0"> </td>
+            <td><input type="button" style="width: 50px" onclick="result()" value="=">  </td>
+            <td><input type="button" style="width: 50px" onclick="(calu.screen.value += '/')" value="/"> </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function result() {
+        let result = eval(document.getElementById("src").value)
+        console.log(result)
+        calu.screen.value = result;
+    }
+</script>
+
 </body>
 </html>

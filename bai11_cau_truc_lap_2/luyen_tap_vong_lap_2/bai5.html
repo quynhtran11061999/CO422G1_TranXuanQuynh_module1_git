@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let p = parseFloat(prompt("Nhập số tiền cho vay:"));
+    let n = parseFloat(prompt("Nhập thời hạn cho vay:"));
+    let r = parseFloat(prompt("Nhập lãi suất trong 1 tháng"));
+    let a;
+    for (i=1;i<=n;i++){
+        a = p * Math.pow((1+r),i);
+        document.write("Số tiền phải trả trong tháng "+i+  " là: " + parseInt(a));
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>
