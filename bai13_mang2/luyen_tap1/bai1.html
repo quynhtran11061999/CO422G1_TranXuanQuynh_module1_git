@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+  let arr = []
+    for (i=0; i<10; i++){
+        let number = prompt("Nhap so" + (i+1)+ "vao mang")
+        arr.push(number)
+    }
+    let count = 0
+    for (i=0; i<arr.length; i++) {
+        if (arr[i] >= 10) {
+            count++
+            document.write(arr[i] + "<br>")
+        }
+    }
+  document.write("co" + count + "so lon hon hoac bang 10")
+
+</script>
+</body>
+</html>
