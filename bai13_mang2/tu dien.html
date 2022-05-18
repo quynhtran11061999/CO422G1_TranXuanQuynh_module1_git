@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<button type="button" onclick="Translate()">Translate</button>
+<p id="result"></p>
+<script>
+    function Translate() {
+        let eng=["blue","red","black","white"]
+        let vi=["màu xanh dương", "màu đỏ", "màu đen","màu trắng"]
+        for (let i = 0; i < eng.length; i++) {
+            let x= document.getElementById("text").value
+            if (x==eng[i]){
+                document.getElementById("result").innerText=vi[i]
+            }
+        }
+    }
+</script>
+</body>
+</html>
