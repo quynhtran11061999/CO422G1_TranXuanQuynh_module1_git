@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let arr = []
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseInt(prompt("Nhap 1 so:"));
+    }
+    document.write(arr);
+    let v = parseInt(prompt("Nhap so nguyen V:"));
+    for (let i = arr.length; i >= 0; i--) {
+        if (arr[i] == v) {
+            for (let j = i; j < arr.length; j++) {
+                arr[j] = arr[j + 1]
+                if (j == arr.length - 1) {
+                    arr[j] = 0
+                }
+            }
+        }
+    }
+    document.write("<br>" + arr);
+</script>
+</body>
+</html>

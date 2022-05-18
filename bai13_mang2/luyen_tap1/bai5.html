@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let arr = []
+    for (i=0;i<5;i++){
+        let number = prompt("Nhap 1 so")
+        arr.push(number)
+    }
+    let count = 0
+    for (i=0;i<arr.length;i++){
+       if (arr[i]<0){
+           count++
+       }
+    } document.write("Co " + count +" so nguyen am trong chuoi: " + arr)
+</script>
+</body>
+</html>

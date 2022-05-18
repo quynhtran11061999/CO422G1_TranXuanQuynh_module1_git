@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let arr = []
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseInt(prompt("Nhap 1 so:"));
+    }
+    document.write(arr);
+    let z=0;
+    let v = parseInt(prompt("Nhap so nguyen:"));
+    for (let i = 0; i < arr.length; i++) {
+        if (v === arr[i]) {
+            z=1;
+            break;
+        }
+    }
+    if (z==1){
+
+        document.write( " V is in the array")
+    }else {
+        document.write(" V is not in the array")
+    }
+
+
+</script>
+</body>
+</html>
