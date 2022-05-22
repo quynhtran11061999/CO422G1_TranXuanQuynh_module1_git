@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    // Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+    function dc(x, y) {
+        let z = x
+        x = y
+        y = z
+        document.write(x);
+        document.write("," + y);
+
+    }
+
+    let n1 = parseInt(prompt("Nhập số thứ 1:"))
+    let n2 = parseInt(prompt("Nhập số thứ 2:"))
+    document.write("Trước khi đổi chỗ: " + n1 + "," + n2 + "<br>")
+    document.write("Sau khi đổi chỗ: ")
+    dc(n1, n2)
+</script>
+</body>
+</html>

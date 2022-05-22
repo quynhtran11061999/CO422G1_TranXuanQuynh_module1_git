@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    // Tạo một mảng là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus.
+    // Tạo một mảng là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo.
+    // Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất.
+    // Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao.
+    // Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai.
+    let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function star(string) {
+         for (let i=0;i<a.length;i++){
+             if (a[i]==string){
+                 result = b[i]
+               document.write(result)
+             } else {
+                 document.write("Không thầy chòm sao nào")
+             }
+         }
+    }
+    let x = prompt("Nhập vào chòm sao cần tìm:")
+    star()
+
+</script>
+</body>
+</html>
