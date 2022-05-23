@@ -7,13 +7,15 @@
 <body>
 <script>
     //Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
-    function gt(a) {
-        let result
-        document.write(a + "!" + b)
+    function factorial(a) {
+        let total = 1;
+        for (i=1;i<=n;i++){
+             total = total *i;
+        } return total
     }
 
     let n = parseInt(prompt("Nhập 1 số nguyên bất kì:"))
-    gt(n)
+    document.write("Giai thừa của " + n + " là = " + factorial(n))
 </script>
 </body>
 </html>

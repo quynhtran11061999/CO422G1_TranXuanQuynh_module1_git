@@ -7,15 +7,15 @@
 <body>
 <script>
     //  Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
-    function kt(number) {
-     if (number%number==0){
+    function checknum(number) {
+     if (number%number==0 || number ==0){
          return true
      } else {
          return false
      }
     }
     let a = prompt("Nhập ký tự:")
-    document.write(kt(a))
+    document.write(checknum(a))
 </script>
 </body>
 </html>

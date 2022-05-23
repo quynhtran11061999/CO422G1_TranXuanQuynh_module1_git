@@ -14,17 +14,18 @@
     let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
     let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
     function star(string) {
+        let result = "";
          for (let i=0;i<a.length;i++){
              if (a[i]==string){
-                 result = b[i]
-               document.write(result)
+                 return b[i];
              } else {
-                 document.write("Không thầy chòm sao nào")
+                 result = "Không thầy chòm sao nào"
              }
-         }
+         } return result
     }
+
     let x = prompt("Nhập vào chòm sao cần tìm:")
-    star()
+    document.write(star(x));
 
 </script>
 </body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    // Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    function charactercheck(arr, c) {
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == c) {
+                count++
+            }
+        }
+        if (count == 0) {
+            return -1
+        }
+        return count;
+    }
+
+    let arr = ['a', 'v', 'a', 'c', 'b', 'i', 'r', 'w', 'a', 'b', 'w', 'v']
+    let c = prompt("Nhap ky tu:")
+    document.write("Ký tự " + c + " xuất hiện " + charactercheck(arr, c))
+</script>
+</body>
+</html>

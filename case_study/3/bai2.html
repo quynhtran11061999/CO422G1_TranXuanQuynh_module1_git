@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2phan3</title>
+</head>
+<body>
+<script>
+    //Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các
+    //phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
+    //Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện
+    let a = [4,5,6,4,5,6]
+    let b = [4,5,6,7,8,4,5,6]
+    for (let i = 0; i <a.length ; i++) {
+        let count = 0
+        for (let j = 0; j <b.length ; j++) {
+            if (a[i]==b[j]){
+                count++
+            }
+        } if (count==0){
+            document.write(b[j])
+        }
+    }
+
+
+</script>
+</body>
+</html>

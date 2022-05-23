@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<script>
+    //Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    function reverse(arr) {
+        let fist = 0
+        let last = arr.length -1
+        let c
+        while (fist<last){
+            c = arr[fist]
+            arr[fist] = arr[last]
+            arr[last] = c
+            fist++
+            last--
+        } return arr
+
+    }
+    let a = [3,4,5,6,7,8,9];
+    document.write("Trước khi đảo mảng: " + a + "<br>");
+    document.write("Sau khi đảo mảng: " + reverse(a));
+</script>
+</body>
+</html>
