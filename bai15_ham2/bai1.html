@@ -8,9 +8,7 @@
 <script>
     function isPrime(number) {
         let count = 0
-        // if (number==1 || number==0){
-        //     return false
-        // }
+
         for (i = 1; i <= number; i++) {
             if (number % i == 0) {
                 count++
@@ -18,10 +16,10 @@
         }
         if (count > 2) {
             return false;
-            //alert(number + " khong phai so nguyen to")//false
+
         } else {
             return true
-            //alert(number + " la so nguyen to")
+
         }
     }
 
@@ -30,7 +28,7 @@
             document.write(j + "<br>")
         }
     }
-    // cho j chay tu 1 den 10k, neu j la snt thi in ra màn hình j
+
 
 </script>
 </body>
