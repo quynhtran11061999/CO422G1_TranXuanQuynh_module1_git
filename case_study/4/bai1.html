@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    // Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu
+    // không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong TaN HAI
+    // ==>; Truong Tan Hai.
+    // Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để nhập
+    // xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+    // let str = prompt("Nhập xâu ký tự:")
+    // str = str.toLowerCase()//chuyen tat ca ky tu thanh viet thuong
+    // str = str.trim() //xoa dau cach dau va cuoi chuoi
+    // let arr = str.split("")//chuyen chuoi thanh mang
+    // arr[0]=arr[0].toUpperCase()// viet hoa vi tri dau tien cua mang
+    // for (let i=0;i<arr.length;i++){
+    //     if (arr[i-1] === " " ){
+    //         arr[i] = arr[i].toUpperCase()//viet hoa
+    //     }
+    // }
+    // document.write(arr.join(''))// chuyen mang thanh chuoi
+    // let result = arr.join("")
+    // arr = result.split(" ")
+    // let max = arr[0].length;
+    // let index = 0;
+    //     for (let j=1;j<arr.length;j++){
+    //         if (max<arr[j].length){
+    //             max=arr[j].length;
+    //             index=j
+    //         }
+    // } document.write("<br>" + "Từ dài nhất trong chuỗi là: " + arr[index] );
+
+    let str = prompt("Nhập xâu ký tự:")
+    str = str.toLowerCase()//chuyen tat ca ky tu thanh viet thuong
+    str = str.trim() //xoa dau cach dau va cuoi chuoi
+    let arr = str.split("")//chuyen chuoi thanh mang
+
+    for (let i=0;i<arr.length;i++){
+        if (arr[i] === " " && arr[i+1]=== " "){
+            arr.splice(i,1)
+        }
+    }
+    // document.write(arr.join(''))// chuyen mang thanh chuoi
+    // let result = arr.join("")
+    // arr = result.split(" ")
+    // let max = arr[0].length;
+    // let index = 0;
+    // for (let j=1;j<arr.length;j++){
+    //     if (max<arr[j].length){
+    //         max=arr[j].length;
+    //         index=j
+    //     }
+    // } document.write("<br>" + "Từ dài nhất trong chuỗi là: " + arr[index] );
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+//  Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+//  Ví dụ: s = aabcc;, thì kết quả differentSymbolsNaive(s) = 3.
+// ⇨ Có 3 kí tự khác nhau là a, b và c.
+    let str = prompt("Nhập vào ký tự");
+    document.write("Chuỗi ký tự bạn nhập vào là " + str + "<br>");
+    let arr = str.split("");
+   let arrResult = []
+    for (i=0;i<arr.length;i++){
+       if (arrResult.indexOf(arr[i]) === -1){
+           arrResult.push(arr[i])
+       }
+    }
+document.write("differentSymbolsNaive(s):" + arrResult.length)
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    // Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có
+    // trong mảng đó.
+    let n = parseInt(prompt("Nhập dộ dài của mảng:"))
+    let m = parseInt(prompt("Nhập độ dài của mảng con:"))
+    let arr= []
+    let count = 0
+    for (let i = 0; i <n ; i++) {
+        arr[i] = []
+        for (let j = 0; j<m;j++){
+            arr[i][j] = parseInt(prompt("Nhập phần tử"))
+        }
+    }
+    document.write(arr)
+      
+    function integer(arr) {
+        let z = []
+        for (let i = 0; i <arr.length ; i++) {
+            for (let j = 0; j <arr[i].length ; j++) {
+               for (let k = 1;k <=arr[i][j];k++){
+                   if (arr[i][j] % k ==0){
+                      count++
+                   }
+               }
+               if (count == 2){
+                   z.push(arr[i][j])
+                   count=0
+                } else {
+                   count =0
+                }
+            }
+        }
+        return z;
+    }
+    document.write("<br>"+"Những số không phải số nguyên tố là: "+integer(arr))
+
+
+</script>
+</body>
+</html>

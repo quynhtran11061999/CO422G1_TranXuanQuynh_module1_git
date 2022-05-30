@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    //  Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ. Ví dụ
+    // 1234, kết quả in ra màn hình là một hai ba bốn.
+    let a = [1,2,3,4,5,6,7,8,9,0];
+    let b = ['một','hai','ba','bốn','năm','sáu','bảy','tám','chín','không'];
+    let c = prompt("Nhập một số");
+    let arr = c.split(" ")
+    let result = " "
+    for (i=0;i<c.length;i++){
+        for (j=0;j<a.length;j++){
+            if (c[i] == a[j]){
+                result  = result + b[j] + " "
+            }
+        }
+    } document.write(result)
+
+
+
+</script>
+</body>
+</html>
+
